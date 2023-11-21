@@ -80,6 +80,9 @@ hideFooter = true
   name = "xing"
   url = "https://www.xing.com/profile/Andreas_Lay3/web_profiles"
 
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/layandreas/personal-blog"
 
 [params.cover]
 hidden = true
