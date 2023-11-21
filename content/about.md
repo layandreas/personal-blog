@@ -11,6 +11,7 @@ disableShare = true
 ShowReadingTime = false
 ShowBreadCrumbs = false
 hidemeda = true
+searchHidden = true
 +++
 
 [My Resume on GitHub](https://github.com/layandreas/typst-resume/blob/main/cv_andreas_lay_en.pdf)
