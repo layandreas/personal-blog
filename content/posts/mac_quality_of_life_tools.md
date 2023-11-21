@@ -1,7 +1,7 @@
 +++
 author = "Andreas  Lay"
 title = "Mac Quality-of-Life Tooling"
-date = "2023-11-21"
+date = "2023-11-20"
 description = "Some tools I recommend when using a Mac"
 tags = ["tools", "mac"]
 categories = ["Tools"]
