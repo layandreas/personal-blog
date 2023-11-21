@@ -1,4 +1,4 @@
-baseURL = "https://layandreas.github.io/"
+baseURL = "https://layandreas.github.io/personal-blog/"
 title = "Personal Blog"
 paginate = 5
 theme = "PaperMod"
@@ -55,7 +55,7 @@ hideFooter = true
   enabled = true
   title = "Andreas Lay"
   subtitle = "Data Scientist & Economist"
-  imageUrl = "/profile.jpeg"
+  imageUrl = "/personal-blog/profile.jpeg"
   imageWidth = 180
   imageHeight = 180
   imageTitle = ""
