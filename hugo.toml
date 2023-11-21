@@ -61,12 +61,21 @@ hideFooter = true
   imageTitle = ""
 
     [[params.profileMode.buttons]]
-    name = "Posts"
+    name = "about"
+    url = "about"
+
+    [[params.profileMode.buttons]]
+    name = "archive"
+    url = "archives"
+
+    [[params.profileMode.buttons]]
+    name = "posts"
     url = "posts"
 
     [[params.profileMode.buttons]]
-    name = "Tags"
-    url = "tags"
+    name = "categories"
+    url = "categories"
+
 
   [params.homeInfoParams]
   Title = ""
@@ -98,36 +107,43 @@ threshold = 0.4
 minMatchCharLength = 0
 keys = [ "title", "permalink", "summary", "content" ]
 
+
+[[menu.main]]
+identifier = "about"
+name = "about"
+url = "/about/"
+weight = 990
+
 [[menu.main]]
 identifier = "archive"
 name = "archive"
 url = "/archives/"
-weight = 10
+weight = 1000
 
 [[menu.main]]
 identifier = "posts"
 name = "posts"
 url = "/posts/"
-weight = 20
+weight = 1010
 
 
 [[menu.main]]
 identifier = "categories"
 name = "categories"
 url = "/categories/"
-weight = 30
+weight = 1020
 
 [[menu.main]]
 identifier = "tags"
 name = "tags"
 url = "/tags/"
-weight = 40
+weight = 1030
 
 [[menu.main]]
 identifier = "search"
 name = "search"
 url = "/search/"
-weight = 50
+weight = 1040
 
 
 
