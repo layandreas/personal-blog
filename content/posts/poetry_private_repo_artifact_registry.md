@@ -4,7 +4,7 @@ title = "Setting Up Poetry to Access GCP Artifact Registry"
 date = "2023-11-20"
 description = "How to use Poetry and GCP Artifact Registry"
 tags = ["python", "poetry", "gcp"]
-categories = ["Python"]
+categories = ["Python", "Platform"]
 ShowToc = true
 TocOpen = true
 +++
