@@ -14,7 +14,7 @@ hidemeda = true
 searchHidden = true
 +++
 
-[My Resume on GitHub](https://github.com/layandreas/typst-resume/blob/main/cv_andreas_lay_en.pdf)
+[My Resume on GitHub](https://github.com/layandreas/typst-resume/blob/main/cv_andreas_lay_en.pdf) • [Contact](mailto:andreas.lay@gmail.com)
 
 This blog is mainly intended as a reference for myself to keep short notes on lessons learned regarding smaller or bigger technical challenges or new technologies — however there is no point in keeping this knowledge private and if any of these posts helps someone else, the better! I try to keep posts relatively small, concise  and focused.
 
