@@ -40,7 +40,7 @@ tocopen = false
 hideFooter = true
 
   [params.assets]
-  favicon = "/personal-blog/fav.png"
+  favicon = "/personal-blog/favicon.ico"
   favicon16x16 = "/personal-blog/favicon-16x16.png"
   favicon32x32 = "/personal-blog/favicon-32x32.png"
   apple_touch_icon = "/personal-blog/apple-touch-icon.png"
