@@ -1,8 +1,8 @@
 +++
 author = "Andreas Lay"
-title = "Hackerfluff: Building a Hackernews Reader with Flutter"
+title = "Hackerfluff: A Hackernews Reader built with Flutter"
 date = "2024-05-22"
-description = "As a learning experience I built & released a Hackernews client app"
+description = "Learning Flutter and Dart by building & releasing a Hackernews Client App"
 tags = ["mobile", "flutter"]
 categories = ["Frontend"]
 ShowToc = true
