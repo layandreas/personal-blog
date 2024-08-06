@@ -1,5 +1,5 @@
 +++
-author = "Andreas  Lay"
+author = "Andreas Lay"
 title = "Securing any App with Oauth2Proxy"
 date = "2023-11-23"
 description = "How to secure apps behind a load balancer with SSO authentication"

@@ -1,5 +1,5 @@
 +++
-author = "Andreas  Lay"
+author = "Andreas Lay"
 title = "A Primer on SARIMAX"
 date = "2023-11-21"
 description = "Generating & modelling synthetic time series data"

@@ -1,5 +1,5 @@
 +++
-author = "Andreas  Lay"
+author = "Andreas Lay"
 title = "Mac Quality-of-Life Tooling"
 date = "2023-11-20"
 description = "Some tools I recommend when using a Mac"

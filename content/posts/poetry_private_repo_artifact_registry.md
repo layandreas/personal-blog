@@ -1,5 +1,5 @@
 +++
-author = "Andreas  Lay"
+author = "Andreas Lay"
 title = "Setting Up Poetry to Access GCP Artifact Registry"
 date = "2023-11-20"
 description = "How to use Poetry and GCP Artifact Registry"
