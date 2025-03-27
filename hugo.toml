@@ -145,6 +145,11 @@ name = "search"
 url = "/search/"
 weight = 1040
 
+[[menu.main]]
+identifier = "links"
+name = "links"
+url = "/links/"
+weight = 1040
 
 
 [markup.highlight]
