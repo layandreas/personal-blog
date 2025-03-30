@@ -57,7 +57,7 @@ print(penguins.to_pandas())
 print("\n")
 ```
 
-Output:
+**Output:**
 
 ```shell
 Tables in duckdb:
@@ -106,11 +106,12 @@ print(penguins.to_pandas())
 print("\n")
 ```
 
-Output:
+_**Note:** This code snippet uses the [deferred expression / Underscore API (\_)](https://ibis-project.org/how-to/analytics/chain_expressions) to access the table's columns including columns added in previous steps._
+
+**Output:**
 
 ```shell
 Penguins with longest bill length by species:
-
 
      species     island  bill_length_mm  bill_depth_mm  flipper_length_mm  body_mass_g     sex  year
 0     Gentoo     Biscoe            59.6           17.0                230         6050    male  2007
@@ -135,7 +136,7 @@ print(penguins.to_pandas())
 print("\n")
 ```
 
-Output:
+**Output:**
 
 ```shell
 Penguins data with JSON payload column:
@@ -208,7 +209,11 @@ will most likely compile to a different expression for other backends.
 
 Here is the full example. To make the data pipeline more composable I wrapped the transformations into the respective functions `_select_longest_bill_by_species` and `_add_json_payload_column`. The `_pipe` helper function was just added for convenience & readability.
 
-_**Tip:** Using [uv](https://github.com/astral-sh/uv) you can run this script with `uv run https://gist.githubusercontent.com/layandreas/d2050e3113c4cbd1627a3cca58040eb3/raw/1acc913dd1042a06017fce16cffa94c4b67d870b/ibis-penguins.py`_
+_**Tip:** Using [uv](https://github.com/astral-sh/uv) you can run the script below script with:_
+
+```shell
+uv run https://gist.githubusercontent.com/layandreas/d2050e3113c4cbd1627a3cca58040eb3/raw/1acc913dd1042a06017fce16cffa94c4b67d870b/ibis-penguins.py
+```
 
 [Gist](https://gist.github.com/layandreas/d2050e3113c4cbd1627a3cca58040eb3)
 
