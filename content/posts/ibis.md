@@ -311,7 +311,7 @@ if __name__ == "__main__":
 
 ### Ibis vs. dbt?
 
-For most pre-processing our data I will generally stick to using raw SQL with [dbt](https://docs.getdbt.com/docs/introduction) with some minimal Jinja templating. `Ibis` will then come in at the _"last mile"_: Some final preparations before loading data into memory e.g. for model fitting or dashboarding.
+For most of the pre-processing of our data I will generally stick to using raw SQL with [dbt](https://docs.getdbt.com/docs/introduction) with some minimal Jinja templating. `Ibis` will then come in at the _"last mile"_: Some final preparations before loading data into memory e.g. for model fitting or dashboarding.
 
 Especially for the dashboarding / frontend tool use cases where a user might have a lot of input options it's extremely useful to be able to programmatically generate queries. While Jinja templating is an option I find using `Ibis` is much easier to write a testable & maintainable code base.
 
@@ -324,3 +324,15 @@ Last but not least for me `Ibis` has proven itself extremely valuable for testin
 - This database is version controlled and checked into our repository.
 
 - At test time we will replace the production database connection with a DuckDB connection and run our tests against the DuckDB test data.
+
+## Considerations Before Using Ibis
+
+Some final remarks before I leave you alone:
+
+- While the official documentation is good it can be lacking in depth in some parts. You may occasionally need to look into Github issues or the source code to find a solution to your problem.
+
+- You should be familiar with SQL before jumping into `Ibis` or at least learn SQL while using it. Its syntax might otherwise feel unfamiliar.
+
+- LLM's aren't that helpful with `Ibis`. If your workflow strongly relies on using LLMs for coding you might get frustrated with hallucinations. I assume there isn't a ton of `Ibis` code in the LLM training corpus.
+
+That said for my use cases `Ibis` solves real problems like being able to fake our production database at test time and avoid Jinja templating hell.
