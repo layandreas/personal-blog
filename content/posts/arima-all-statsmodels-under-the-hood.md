@@ -1,6 +1,6 @@
 +++
 author = "Andreas Lay"
-title = "ARIMA Models in Python: Is it all Statsmodels under the hood?"
+title = "ARIMA Models in Python: Is it all Statsmodels Under The Hood?"
 date = "2025-05-11"
 description = "Taking a closer look at popular time series libraries' implementation of ARIMA models"
 tags = ["python", "sarimax", "time series analysis", "forecasting"]
