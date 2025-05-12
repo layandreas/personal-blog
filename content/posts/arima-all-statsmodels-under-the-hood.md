@@ -1,6 +1,6 @@
 +++
 author = "Andreas Lay"
-title = "ARIMA Models in Python: Is it all Statsmodels Under The Hood?"
+title = "ARIMA Models in Python: All Just Statsmodels Under The Hood?"
 date = "2025-05-11"
 description = "Taking a closer look at popular time series libraries' implementation of ARIMA models"
 tags = ["python", "sarimax", "time series analysis", "forecasting"]
@@ -53,9 +53,19 @@ The [statsforecast](https://github.com/Nixtla/statsforecast) package provides us
 
 But even `statsforecast` relies on `statsmodels`: To handle exogenous regressors, [statsmodels' ordinary least squares (sm.OLS)](https://github.com/Nixtla/statsforecast/blob/main/python/statsforecast/arima.py#L399) is used!
 
+### autogluon: Automated Time Series Forecasting
+
+Last but not least [autogluon](https://auto.gluon.ai/stable/index.html) aims to provide easy-to-use automated time series forecasting. Looking at the module [timeseries/src/autogluon/timeseries/models/local/statsforecast.py](https://github.com/autogluon/autogluon/blob/9f0475abc7981fa55ccd8f917a98fb2c60a5c930/timeseries/src/autogluon/timeseries/models/local/statsforecast.py) reveals its dependency on `statsforecast`, among others [statsforecast.models.AutoARIMA](https://github.com/autogluon/autogluon/blob/9f0475abc7981fa55ccd8f917a98fb2c60a5c930/timeseries/src/autogluon/timeseries/models/local/statsforecast.py#L165).
+
+So this is actually the first library we found without any reliance on `statsmodels`. But that hasn't always been the case: [This commit from April 2024](https://github.com/autogluon/autogluon/commit/57e8ae19fe4ca39f33a69f884fe645e60abfc5b1) removed a former `statsmodels` dependency!
+
+## statsmodels vs. statsforecast
+
+So `ARIMA` models in the Python ecosystem apparently rely on either the `statsmodels` or `statsforecast` implementations (or both). Why would you choose on over the other? I have not benchmarked it myself yet, but [statsforecast claims to be around 4x faster than statsmodels](https://github.com/Nixtla/statsforecast?tab=readme-ov-file#highlights). So if performance matters to you, i.e. because you need to run a large amount of `ARIMA` models, you might want to check out `statsforecast` or `statsforecast` based frameworks.
+
 ## Lesson Learned: Always Spend Some Time Understanding Your Tools
 
-I was actually surprised to find out that all of the above time series packages depend on the `statsmodels` package!
+I was actually surprised to find out that all of the above time series packages—with the exception of `autogluon`—depend on the `statsmodels` package!
 While it makes sense that not each library reinvents the wheel it isn't always immediately clear what the respective library offers vs. what core functionality is inherited from another package. To be fair: Each package is generally transparent about this.
 
 Nevertheless I recommend to at least take a quick look at the underlying source code and ask yourself: _Do you really need additional layers of abstractions a "wrapper" package offers?_
