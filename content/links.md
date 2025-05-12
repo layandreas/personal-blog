@@ -2,7 +2,7 @@
 author = ""
 title = "Links"
 date = ""
-description = "Collection of links to learning resources other interesting content"
+description = "Collection of links to learning resources and other interesting content"
 ShowToc = false
 TocOpen = false
 ShowWordCount = false
