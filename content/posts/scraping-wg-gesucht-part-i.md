@@ -19,7 +19,7 @@ Finding affordable appartments is hard. We may not be able to influence rental p
 
 You can find the source code on [Github](https://github.com/layandreas/wg-watch). The final result will looks like this and can be accessed [under this link](https://wg-watch-137914338338.europe-west1.run.app/):
 
-{{< iframe2 src="https://wg-watch-137914338338.europe-west1.run.app/" width="100%" height="400" >}}
+![](/personal-blog/wg-gesucht-watch-screenshot.png)
 
 This part of my series deals with the actual scraping.
 
