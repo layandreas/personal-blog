@@ -17,11 +17,11 @@ Finding affordable appartments is hard. We may not be able to influence rental p
 2. Write the results to a `sqlite` database
 3. Write a small [Django](https://www.djangoproject.com/) to serve our scraped data as a dashboard
 
-The final result will looks like this:
+You can find the source code on [Github](https://github.com/layandreas/wg-watch). The final result will looks like this and can be accessed [under this link](https://wg-watch-137914338338.europe-west1.run.app/):
 
 {{< iframe2 src="https://wg-watch-137914338338.europe-west1.run.app/" width="100%" height="400" >}}
 
-This part of our series deals with the actual scraping.
+This part of my series deals with the actual scraping.
 
 ## WG Gesucht?
 
@@ -60,7 +60,7 @@ We can parameterize the search result URL with these parameters:
 - city_id
 - page
 
-In our code we simply use a templated string:
+In my code I simply use a templated string:
 
 ```python
 URL_TEMPLATE = (
@@ -73,4 +73,32 @@ URL_TEMPLATE = (
 
 We are going to query all listings without further filters.
 
-## Our Humble Scraping Tech Stack
+## Let's Scrape
+
+The [scraper](https://github.com/layandreas/wg-watch/blob/main/scraper/main.py) in itself is quite simple. I am using [Zendriver](https://github.com/cdpdriver/zendriver) for scraping via Chrome and parse the scraped HTML with [Beautiful Soup](https://pypi.org/project/beautifulsoup4/).
+
+Running the scraper will:
+
+- open multiple Chrome instances and scrape the site for you
+- load & parse the HTML
+- write the extracted data into a local SQLite database.
+
+This is how it looks:
+
+{{< youtube btMRIabYSUA >}}
+
+After a while you will run into Captchas:
+
+![](/personal-blog/wg-gesucht-captcha.png)
+
+My script currently detectes when a Captcha page pops up and stops scraping while waiting for the user to manually solve the captcha. After that scraping for the corresponding page will continue. It might be worth checking out [SeleniumBase](https://github.com/seleniumbase/SeleniumBase) which might be able to bypass Captchas.
+
+## Result: A Database of Apartment Listings
+
+After our scraper has finished its job we will see that our table in SQLite has filled up with listing data:
+
+![](/personal-blog/wg-gesucht-db.png)
+
+## Part II: Building a Dashboard
+
+That's it for this part! Now that we've got our data collected we'd like get some insights into rental prices. Therefore in the upcoming part II I will show you how I've built a small UI using [Django](https://www.djangoproject.com/), [daisyUI](https://daisyui.com/) & [Alpine.js](https://alpinejs.dev/) to visualize our scraped data.
