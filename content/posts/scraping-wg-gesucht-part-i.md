@@ -11,7 +11,7 @@ TocOpen = true
 
 ## Our Goal
 
-Finding affordable appartments is hard. We may not be able to influence rental prices but at least we can bring some transparency into the market. Our goal: We want to collect appartment listings with corresponding meta information like rental prices, square meters and location. To achieve this we will:
+Finding affordable apartments is hard. We may not be able to influence rental prices but at least we can bring some transparency into the market. Our goal: We want to collect apartment listings with corresponding meta information like rental prices, square meters and location. To achieve this we will:
 
 1. Crawl [wg-gesucht.de](https://www.wg-gesucht.de/)
 2. Write the results to a `sqlite` database
