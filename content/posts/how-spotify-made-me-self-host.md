@@ -27,7 +27,7 @@ I decided to give Spotify's _free plan_ a try. How bad can it be? I had used the
 
 ![Spotify Free Tier: Play Song in Random Order](/personal-blog/spotify-random-order.JPG)
 
-- The free tier forces shuffle after a certain amount of free choices. So while the tier might be free, your song choice is not. [Although there are reports that Spotify supposedly got rid of this feature as of September 2025], I still encountered this restriction as of end of December 2025
+- The free tier forces shuffle after a certain amount of free choices. So while the tier might be free, your song choice is not. [Although there are reports that Spotify supposedly got rid of this feature as of September 2025](https://www.theverge.com/news/778176/spotify-free-user-upgrade-play-specific-songs), I still encountered this restriction as of end of December 2025
 
 - It's not possible to scrub the song's progress bar
 
