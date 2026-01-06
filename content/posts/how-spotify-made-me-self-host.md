@@ -3,7 +3,7 @@ author = "Andreas Lay"
 title = "How Spotify Made Me Self Host"
 date = "2026-01-06"
 description = "Self hosting my media library with Jellyfin & Wireguard on Hetzner"
-tags = ["self-hosting", "jellyin", "hetzner", "docker"]
+tags = ["self-hosting", "jellyfin", "hetzner", "docker"]
 categories = ["Self-Hosting"]
 ShowToc = true
 TocOpen = true
@@ -53,11 +53,11 @@ Amazon Prime introduced ads to an already paid service. This is a noticeable wor
 
 #### UI
 
-In May 2025 Netflix [introduced a new UI](https://www.netflix.com/tudum/articles/netflix-new-tv-layout). It's a matter of of taste and while some people may like it, I find it much worse.
+In May 2025 Netflix [introduced a new UI](https://www.netflix.com/tudum/articles/netflix-new-tv-layout). It's a matter of taste and while some people may like it, I find it much worse.
 
 #### Cracking Down on Password Sharing
 
-Disney+ followed Netflix and [cracked down on password sharing](https://www.businessinsider.com/streaming-password-sharing-crackdown-disney-netflix-max-2025-5). This is a de factor price increase for many.
+Disney+ followed Netflix and [cracked down on password sharing](https://www.businessinsider.com/streaming-password-sharing-crackdown-disney-netflix-max-2025-5). This is a de facto price increase for many.
 
 ## Self Hosting Setup
 
@@ -69,7 +69,7 @@ Instead of going with my own hardware I decided to go with a [VPS from Hetzner](
 
 ### Storage: Hetzner Storage Box
 
-While I could use the server's to store my media, I decided to use Hetzner's [Storage Box](https://www.hetzner.com/storage/storage-box/). This way I can easily [mount my media library on my Macbook via SMB](https://docs.hetzner.com/de/storage/storage-box/access/access-samba-cifs/).
+While I could use the server's SSD to store my media, I decided to use Hetzner's [Storage Box](https://www.hetzner.com/storage/storage-box/). This way I can easily [mount my media library on my Macbook via SMB](https://docs.hetzner.com/de/storage/storage-box/access/access-samba-cifs/).
 
 ### Media Server: Jellyfin
 
@@ -81,7 +81,7 @@ To access my VPS remotely either from home or on the road I use [WireGuard](http
 
 - **Home network:** My FRITZ!Box router lets me easily [add a WireGuard configuration](https://fritz.com/pages/vpn-mit-fritz-box) to my home network. This way any device in my home network can access my media network without having to run a VPN. This is especially useful for accessing Jellyfin on my LG webOS TV as there's no easy way to connect my TV to WireGuard directly
 
-- **On the road**: Simply [install WireGuard on your device](https://www.wireguard.com/install/). You will need to create a client configuration for each of your devices.
+- **On the road**: Simply [install WireGuard on your device](https://www.wireguard.com/install/). You will need to create a client configuration for each of your devices
 
 #### Server Config
 
@@ -115,7 +115,7 @@ In my WireGuardserver config I currently have three devices added as peers:
 - My iPhone (`wireguard_client_public_key_iphone`)
 - My FRITZ!Box router (`wireguard_client_public_key_fritzbox`)
 
-Each device has its corresponding private key stored inside its WireGuard configuration / app. The `AllowedIPs` only allows the corresponding peer to use this internal IP address. **On your device** (router, notebook, mobile phone, ...) you'll need to assign this ip address as the **interface section**.
+Each device has its corresponding private key stored inside its WireGuard configuration / app. The `AllowedIPs` only allows the corresponding peer to use this internal IP address. **On your device** (router, notebook, mobile phone, ...) you'll need to assign this IP address as the **interface section**.
 
 Let's dive a bit deeper into the interface block.
 
