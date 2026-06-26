@@ -2,7 +2,7 @@
 author = "Andreas Lay"
 title = "Beyond Vibecoding: Spec Driven Development with OpenSpec & Open Code Review"
 date = "2026-06-26"
-description = "LLM Driven Development Speedups While Maintaining High Quality"
+description = "LLM Driven Development Speedups While Keeping Code Quality High"
 tags = ["openspec", "open-code-review", "claude", "spec-driven-development"]
 categories = ["Spec-Driven"]
 ShowToc = true
